@@ -9,7 +9,8 @@
 		"lint:fix": "next lint --fix",
 		"start": "next start",
 		"prettier": "prettier .",
-		"prettier:fix": "prettier --write ."
+		"prettier:fix": "prettier --write .",
+		"prepare": "husky"
 	},
 	"husky": {
 		"hooks": {
@@ -17,8 +18,8 @@
 		}
 	},
 	"lint-staged": {
-		"**/*.{ts,tsx}": "npm run lint",
-		"**/*.{ts,tsx,html,css,json}": "npm run prettier"
+		"**/*.{js,jsx,ts,tsx}": "npm run lint:fix",
+		"**/*.{js,jsx,ts,tsx,html,css,json}": "npm run prettier:fix"
 	},
 	"dependencies": {
 		"@clerk/nextjs": "^5.1.6",
