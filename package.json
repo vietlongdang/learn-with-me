@@ -10,16 +10,6 @@
 		"start": "next start",
 		"prettier": "prettier .",
 		"prettier:fix": "prettier --write .",
-		"prepare": "husky"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"**/*.{js,jsx,ts,tsx}": "npm run lint:fix",
-		"**/*.{js,jsx,ts,tsx,html,css,json}": "npm run prettier:fix"
 	},
 	"dependencies": {
 		"@clerk/nextjs": "^5.1.6",
